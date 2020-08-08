@@ -12,7 +12,6 @@ emptyHearts.forEach((heartElem) => {
     if (event.target.innerText === EMPTY_HEART) {
       mimicServerCall()
         .then((result) => {
-          console.log(heartElem);
           heartElem.innerText = FULL_HEART;
           heartElem.className = "activated-heart";
         })
@@ -23,7 +22,7 @@ emptyHearts.forEach((heartElem) => {
           }, 5000);
         });
     } else {
-      heartElem.innerText = EMPTY_HEART;
+          heartElem.innerText = EMPTY_HEART;
           heartElem.className = "activated-heart";
           heartElem.classList.remove("activated-heart")
     }
