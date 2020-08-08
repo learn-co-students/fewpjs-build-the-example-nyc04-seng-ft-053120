@@ -11,11 +11,11 @@ emptyHearts.forEach((heartElem) => {
   heartElem.addEventListener("click", (event) => {
     if (event.target.innerText === EMPTY_HEART) {
       mimicServerCall()
-        .then((result) => {
+        .then(() => {
           heartElem.innerText = FULL_HEART;
           heartElem.className = "activated-heart";
         })
-        .catch((error) => {
+        .catch(() => {
           tagErrorModal.classList.remove("hidden");
           setTimeout(() => {
             tagErrorModal.className = "hidden";
